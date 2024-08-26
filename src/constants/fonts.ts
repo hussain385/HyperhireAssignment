@@ -1,14 +1,17 @@
-import {isIOS} from "./common";
+import {isIOS} from './common';
 
 export const fontFamily = {
-    DMSANS: {
-        regular: isIOS() ? "DMSans-Regular" : "DMSansRegular",
-        medium: isIOS() ? "DMSans-Medium" : "DMSansMedium",
-        light: isIOS() ? "DMSans-Light" : "DMSansLight",
-        semibold: isIOS() ? "DMSans-SemiBold" : "DMSansSemiBold",
-        thin: isIOS() ? "DMSans-Thin" : "DMSansThin",
-        extraLight: isIOS() ? "DMSans-ExtraLight" : "DMSansExtraLight",
-        extraBold: isIOS() ? "DMSans-ExtraBold" : "DMSansExtraBold",
-        bold: isIOS() ? "DMSans-Bold" : "DMSansBold"
-    }
-}
+  PlusJakartaSans: {
+    regular: isIOS() ? 'PlusJakartaSans-Regular' : 'PlusJakartaSansRegular',
+    medium: isIOS() ? 'PlusJakartaSans-Medium' : 'PlusJakartaSansMedium',
+    light: isIOS() ? 'PlusJakartaSans-Light' : 'PlusJakartaSansLight',
+    semibold: isIOS() ? 'PlusJakartaSans-SemiBold' : 'PlusJakartaSansSemiBold',
+    extraLight: isIOS()
+      ? 'PlusJakartaSans-ExtraLight'
+      : 'PlusJakartaSansExtraLight',
+    extraBold: isIOS()
+      ? 'PlusJakartaSans-ExtraBold'
+      : 'PlusJakartaSansExtraBold',
+    bold: isIOS() ? 'PlusJakartaSans-Bold' : 'PlusJakartaSansBold',
+  },
+};
