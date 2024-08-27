@@ -24,8 +24,7 @@ const ThemeInputComponent = ({
   const [securePassword, setSecurePassword] = useState(true);
 
   return (
-    <View
-      style={tw`flex flex-col gap-1 w-full`}>
+    <View style={tw`flex flex-col gap-1 w-full`}>
       {label && <Text style={tw`text-[#fff] font-semibold`}>{label}</Text>}
       <View
         style={tw`bg-input-bg rounded-2xl items-center pr-7 justify-between flex-row ${
@@ -37,7 +36,10 @@ const ThemeInputComponent = ({
           value={value}
           secureTextEntry={secureTextEntry ? securePassword : undefined}
           placeholderTextColor={'#667085'}
-          style={[tw`w-9/12 p-4 text-lg placeholder:font-extra-light`, {fontFamily: getFontFamily('regular')}]}
+          style={[
+            tw`${secureTextEntry ? 'w-10/12' : 'w-full'} p-4 text-lg placeholder:font-extra-light`,
+            {fontFamily: getFontFamily('regular')},
+          ]}
         />
         {secureTextEntry && (
           <TouchableOpacity

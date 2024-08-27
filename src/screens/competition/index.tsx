@@ -34,7 +34,7 @@ const CompetitionScreen = () => {
 
   return (
     <SafeAreaView style={tw`flex-1 bg-white`}>
-      <View style={tw`px-6 py-2`}>
+      <View style={tw`px-6 pb-4 pt-6`}>
         <View style={tw`gap-4 flex-row items-center mb-4`}>
           <TouchableOpacity
             onPress={() => navigate.goBack()}
@@ -55,7 +55,7 @@ const CompetitionScreen = () => {
         </View>
         <Text
           style={[
-            tw`font-bold text-[24px] text-theme-gray`,
+            tw` text-[24px] text-theme-gray`,
             {fontFamily: getFontFamily('extraBold')},
           ]}>
           Competition
@@ -70,7 +70,7 @@ const CompetitionScreen = () => {
           register.
         </Text>
       </View>
-      <ScrollView contentContainerStyle={tw`gap-4 px-6 pb-4`}>
+      <ScrollView contentContainerStyle={tw`gap-4 px-6 pb-16`}>
         {filteredData.map((data, key) => (
           <CompetitionCardComponent key={key} data={data} />
         ))}

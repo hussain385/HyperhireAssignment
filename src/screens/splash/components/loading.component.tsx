@@ -34,7 +34,7 @@ const LoadingComponent = () => {
       style={tw`absolute bg-theme-blue gap-3 items-center justify-center z-10 top-0 left-0 h-full w-full`}>
       <Animated.Text
         style={[
-          tw`font-bold text-[36px] text-white`,
+          tw` text-[36px] text-white`,
           {fontFamily: getFontFamily('bold')},
           {transform: [{translateY: bounce}]},
         ]}>

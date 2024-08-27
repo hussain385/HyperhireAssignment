@@ -15,11 +15,11 @@ const HomeScreen = () => {
 
   return (
     <SafeAreaView style={tw`flex-1 bg-white`}>
-      <View style={tw`py-2`}>
+      <View style={tw`py-6`}>
         <View style={tw`px-6 gap-4 flex-row items-center justify-between`}>
           <Text
             style={[
-              tw`font-bold text-[24px] text-theme-gray`,
+              tw` text-[24px] text-theme-gray`,
               {fontFamily: getFontFamily('extraBold')},
             ]}>
             Hyperhire Assignment

@@ -23,12 +23,12 @@ const BtnComponent = ({
       style={tw`bg-theme-blue flex-row justify-between items-center rounded-full p-1.5 pl-6 w-[87%] ${
         btnClassName ? btnClassName : ''
       }`}>
-      <View style={tw`flex-row gap-6`}>
+      <View style={tw`flex-row gap-6 items-center`}>
         {leftIcon}
         <Text
           style={[
-            tw`font-bold text-base text-white`,
-            {fontFamily: getFontFamily('bold')},
+            tw` text-base text-white`,
+            {fontFamily: getFontFamily('bold'), lineHeight: 17},
           ]}>
           {label}
         </Text>

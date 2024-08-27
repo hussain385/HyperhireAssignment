@@ -19,7 +19,7 @@ const SelectCompetitionComponent = () => {
         numberOfLines={1}
         style={[
           tw`text-[#667085] text-lg w-10/12`,
-          {fontFamily: getFontFamily('light')},
+          {fontFamily: getFontFamily('regular')},
         ]}>
         {competition ? competition.title : 'Competition to sign up *'}
       </Text>

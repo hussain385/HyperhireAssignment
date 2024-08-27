@@ -26,7 +26,7 @@ const SignUpCompleteModalComponent = ({
       <View
         style={tw`flex-1 items-center justify-center bg-[rgba(0,0,0,0.45)]`}>
         <View
-          style={tw`bg-white rounded-4xl p-8 items-center justify-between w-[90%] h-[37%]`}>
+          style={tw`bg-white rounded-4xl p-8 items-center justify-between w-[90%] h-[38%]`}>
           <View style={tw`justify-between flex-row w-full`}>
             <ThemeRoundBtnComponent
               onPress={() => console.log('')}
@@ -39,10 +39,10 @@ const SignUpCompleteModalComponent = ({
               className={'border border-[#D0D5DD] bg-transparent'}
             />
           </View>
-          <View style={tw`w-full gap-4`}>
+          <View style={tw`w-full gap-2`}>
             <Text
               style={[
-                tw`font-bold text-[24px] text-theme-gray`,
+                tw` text-[24px] text-theme-gray`,
                 {fontFamily: getFontFamily('extraBold')},
               ]}>
               Welcome to Hyperhire

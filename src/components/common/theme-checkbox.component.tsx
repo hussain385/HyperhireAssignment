@@ -47,7 +47,7 @@ const ThemeCheckBoxComponent = ({
       </Animated.View>
       <Text
         style={[
-          tw`w-10/12 text-base text-theme-gray -mt-0.5`,
+          tw`w-10/12 text-base text-theme-gray -mt-1`,
           {fontFamily: getFontFamily('light')},
         ]}>
         {label}

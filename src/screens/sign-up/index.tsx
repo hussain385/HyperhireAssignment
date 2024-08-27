@@ -66,7 +66,7 @@ const SignupScreen = () => {
 
   return (
     <SafeAreaView style={tw`flex-1 bg-white`}>
-      <View style={tw`py-2`}>
+      <View style={tw`pt-6`}>
         <View style={tw`px-6 gap-4 flex-row items-center`}>
           <ThemeRoundBtnComponent
             onPress={navigation.goBack}
@@ -75,14 +75,14 @@ const SignupScreen = () => {
           />
           <Text
             style={[
-              tw`font-bold text-[24px] text-theme-gray`,
+              tw`text-[24px] text-theme-gray`,
               {fontFamily: getFontFamily('extraBold')},
             ]}>
             Create Account
           </Text>
         </View>
         <ScrollView
-          contentContainerStyle={{paddingBottom: screen_height * 0.15}}>
+          contentContainerStyle={{paddingBottom: screen_height * 0.16}}>
           <View style={tw`px-6 gap-4 w-full mt-6`}>
             <SelectCompetitionComponent />
             {errors['competition'] && errors['competition']?.message && (

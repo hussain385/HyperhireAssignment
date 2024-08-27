@@ -22,7 +22,8 @@ const SplashScreen = () => {
       <Video
         source={background}
         ref={videoRef}
-        style={tw`absolute top-0 left-0 right-0 bottom-0`}
+        resizeMode={'cover'}
+        style={tw`absolute top-0 left-0 right-0 bottom-0 h-full`}
         repeat
         onBuffer={e => {
           setTimeout(() => {
@@ -35,7 +36,7 @@ const SplashScreen = () => {
         <View style={[tw`h-1/2 px-[9%]`, {paddingTop: screen_height * 0.15}]}>
           <Text
             style={[
-              tw`font-bold text-[36px] text-white`,
+              tw` text-[36px] text-white`,
               {fontFamily: getFontFamily('bold')},
             ]}>
             Hyperhire{'\n'}assignment

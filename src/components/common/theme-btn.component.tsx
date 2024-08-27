@@ -17,7 +17,7 @@ const ThemeBtnComponent = ({onPress, label, isLoading}: componentPropType) => {
       {isLoading && <ActivityIndicator color="white" style={tw`-ml-4`} />}
       <Text
         style={[
-          tw`font-bold text-base text-white`,
+          tw` text-base text-white`,
           {fontFamily: getFontFamily('bold')},
         ]}>
         {label}

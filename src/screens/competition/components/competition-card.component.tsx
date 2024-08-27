@@ -26,7 +26,7 @@ const CompetitionCardComponent = ({data}: componentPropType) => {
         <View style={tw`p-6`}>
           <Text
             style={[
-              tw`font-bold text-[18px] text-white`,
+              tw` text-[18px] text-white`,
               {fontFamily: getFontFamily('extraBold'), lineHeight: 27},
             ]}>
             {data.title}
