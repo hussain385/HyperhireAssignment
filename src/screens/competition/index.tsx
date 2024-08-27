@@ -15,6 +15,7 @@ import CompetitionCardComponent from '@screens/competition/components/competitio
 import {ICompetition} from '@/interfaces/auth.interfaces';
 import {isEmpty} from 'lodash';
 import {useNavigation} from '@react-navigation/native';
+import CompetitionCardsView from '@screens/competition/view/competition-cards.view';
 
 const CompetitionScreen = () => {
   const [searchValue, setSearchValue] = useState<string>('');
@@ -70,11 +71,7 @@ const CompetitionScreen = () => {
           register.
         </Text>
       </View>
-      <ScrollView contentContainerStyle={tw`gap-4 px-6 pb-16`}>
-        {filteredData.map((data, key) => (
-          <CompetitionCardComponent key={key} data={data} />
-        ))}
-      </ScrollView>
+      <CompetitionCardsView data={filteredData}/>
     </SafeAreaView>
   );
 };
