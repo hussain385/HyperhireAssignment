@@ -8,7 +8,7 @@
       "@assets/*": ["assets/*"],
       "@utils/*": ["utils/*"],
       "@constants/*": ["constants/*"],
-      "@navigation/*": ["navigation/*"],
+      "@navigations/*": ["navigations/*"],
       "@/*": ["*"],
       "@styles/*": ["styles/*"],
       "@redux/*": ["redux/*"],

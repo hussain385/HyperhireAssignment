@@ -2,6 +2,7 @@ import React from 'react';
 import {Controller} from 'react-hook-form';
 import {Text} from 'react-native';
 import ThemeInputComponent from '@components/common/theme-input.component';
+import tw from '@utils/tailwind';
 
 type componentPropType = {
   errors: any;
@@ -36,7 +37,7 @@ const ControlledInputComponent = ({
         name={inputName}
       />
       {errors[inputName] && errors[inputName]?.message && (
-        <Text>{errors[inputName]?.message as never}</Text>
+        <Text style={[tw`text-errorText`]}>{errors[inputName]?.message as never}</Text>
       )}
     </>
   );

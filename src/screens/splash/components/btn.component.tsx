@@ -20,7 +20,7 @@ const BtnComponent = ({
   return (
     <TouchableOpacity
       onPress={onPress}
-      style={tw`bg-theme-blue flex-row justify-between items-center rounded-full p-1.5 pl-4 w-10/12 ${
+      style={tw`bg-theme-blue flex-row justify-between items-center rounded-full p-1.5 pl-6 w-[87%] ${
         btnClassName ? btnClassName : ''
       }`}>
       <View style={tw`flex-row gap-6`}>

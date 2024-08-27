@@ -3,6 +3,8 @@ import tw from '@utils/tailwind';
 import {ImageBackground, Pressable, Text, View} from 'react-native';
 import {getFontFamily} from '@utils/font-family';
 import {ICompetition} from '@/interfaces/auth.interfaces';
+import {updateCompetition} from '@redux/actions';
+import {useNavigation} from '@react-navigation/native';
 
 type componentPropType = {
   data: ICompetition;
@@ -10,8 +12,14 @@ type componentPropType = {
 };
 
 const CompetitionCardComponent = ({data}: componentPropType) => {
+  const navigation = useNavigation();
+  const onPressCard = () => {
+    updateCompetition(data);
+    navigation.goBack();
+  };
+
   return (
-    <Pressable>
+    <Pressable onPress={onPressCard}>
       <ImageBackground
         source={require('@assets/images/asian-games.png')}
         style={tw`bg-theme-blue w-full rounded-2xl`}>

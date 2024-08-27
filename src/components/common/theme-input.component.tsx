@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {Text, TextInput, TouchableOpacity, View} from 'react-native';
 import tw from '@utils/tailwind';
 import {EyeCloseIcon, EyeIcon} from '@assets/icons';
+import {getFontFamily} from '@utils/font-family';
 
 type componentPropType = {
   placeholder: string;
@@ -24,19 +25,19 @@ const ThemeInputComponent = ({
 
   return (
     <View
-      style={tw`flex flex-col gap-1 w-full ${
-        customClassName ? customClassName : ''
-      }`}>
+      style={tw`flex flex-col gap-1 w-full`}>
       {label && <Text style={tw`text-[#fff] font-semibold`}>{label}</Text>}
       <View
-        style={tw`bg-input-bg rounded-2xl items-center pr-7 justify-between flex-row`}>
+        style={tw`bg-input-bg rounded-2xl items-center pr-7 justify-between flex-row ${
+          customClassName ? customClassName : ''
+        }`}>
         <TextInput
           onChangeText={onChange}
           placeholder={placeholder}
           value={value}
-          secureTextEntry={securePassword}
+          secureTextEntry={secureTextEntry ? securePassword : undefined}
           placeholderTextColor={'#667085'}
-          style={tw`w-9/12 p-4 text-lg placeholder:font-extra-light`}
+          style={[tw`w-9/12 p-4 text-lg placeholder:font-extra-light`, {fontFamily: getFontFamily('regular')}]}
         />
         {secureTextEntry && (
           <TouchableOpacity

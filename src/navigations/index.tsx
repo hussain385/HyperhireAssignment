@@ -1,18 +1,21 @@
 import React from 'react';
 import {routes} from '@constants/routes';
+import AuthNavigation from './auth';
+import MainNavigation from './main';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {SplashScreen, SignupScreen, CompetitionScreen} from '@screens/index';
+import {useAppSelector} from '@redux/hooks';
 
 const MainStack = createNativeStackNavigator();
 
 const RootNavigation = () => {
+  const {user} = useAppSelector(state => state.user);
+
   return (
     <MainStack.Navigator
       screenOptions={{headerShown: false}}
-      initialRouteName={routes.splash}>
-      <MainStack.Screen name={routes.splash} component={SplashScreen} />
-      <MainStack.Screen name={routes.signup} component={SignupScreen} />
-      <MainStack.Screen name={routes.competition} component={CompetitionScreen} />
+      initialRouteName={user ? routes.main_stack : routes.auth_stack}>
+      <MainStack.Screen name={routes.auth_stack} component={AuthNavigation} />
+      <MainStack.Screen name={routes.main_stack} component={MainNavigation} />
     </MainStack.Navigator>
   );
 };

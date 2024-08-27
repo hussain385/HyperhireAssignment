@@ -32,7 +32,7 @@ const SplashScreen = () => {
       />
       {isLaoding && <LoadingComponent />}
       <View style={tw`flex-1 justify-end`}>
-        <View style={[tw`h-1/2 px-[10%]`, {paddingTop: screen_height * 0.15}]}>
+        <View style={[tw`h-1/2 px-[9%]`, {paddingTop: screen_height * 0.15}]}>
           <Text
             style={[
               tw`font-bold text-[36px] text-white`,
@@ -52,7 +52,7 @@ const SplashScreen = () => {
               {paddingBottom: screen_height * 0.15},
             ]}>
             <BtnComponent
-              onPress={() => navigation.navigate(routes.competition)}
+              onPress={() => navigation.navigate(routes.signup)}
               label={'Sign up for free'}
               leftIcon={<LoginIcon />}
             />
