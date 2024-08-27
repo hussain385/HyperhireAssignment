@@ -6,7 +6,7 @@ import {DownArrow} from '@assets/icons';
 
 const SelectCompetitionComponent = () => {
   return (
-    <View style={tw`flex-row justify-between p-4 py-5 pr-6 bg-input-bg rounded-2xl w-full`}>
+    <View style={tw`flex-row justify-between p-4 pr-6 bg-input-bg rounded-2xl w-full`}>
       <Text style={[tw`text-[#667085] text-lg`, {fontFamily: getFontFamily('light')}]}>Competition to sign up * </Text>
       <DownArrow />
     </View>

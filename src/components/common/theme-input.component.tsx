@@ -36,7 +36,7 @@ const ThemeInputComponent = ({
           value={value}
           secureTextEntry={securePassword}
           placeholderTextColor={'#667085'}
-          style={tw`w-9/12 p-4 py-5 text-lg placeholder:font-extra-light`}
+          style={tw`w-9/12 p-4 text-lg placeholder:font-extra-light`}
         />
         {secureTextEntry && (
           <TouchableOpacity

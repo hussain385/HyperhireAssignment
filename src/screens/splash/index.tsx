@@ -52,7 +52,7 @@ const SplashScreen = () => {
               {paddingBottom: screen_height * 0.15},
             ]}>
             <BtnComponent
-              onPress={() => navigation.navigate(routes.signup)}
+              onPress={() => navigation.navigate(routes.competition)}
               label={'Sign up for free'}
               leftIcon={<LoginIcon />}
             />
