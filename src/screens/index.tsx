@@ -1,3 +1,5 @@
 import SplashScreen from './splash';
+import SignupScreen from './sign-up';
+import CompetitionScreen from './competition';
 
-export {SplashScreen};
+export {SplashScreen, SignupScreen, CompetitionScreen};

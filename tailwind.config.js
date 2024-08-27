@@ -3,7 +3,7 @@ module.exports = {
     fontSize: {
       xs: '0.7rem',
       sm: '0.8rem',
-      base: '0.9rem',
+      base: '14px',
       lg: '1.125rem',
       xl: '1.25rem',
       '2xl': '1.563rem',
@@ -15,7 +15,7 @@ module.exports = {
       colors: {
         errorText: '#FF2323',
         'theme-blue': '#253BFF',
-        'input-bg': '#F2F4F7',
+        'input-bg': '#F9FAFB',
         'theme-gray': '#1D2939',
       },
       borderRadius: {
