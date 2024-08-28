@@ -1,5 +1,5 @@
 import React, {useEffect, useRef} from 'react';
-import {ActivityIndicator, Animated, View} from 'react-native';
+import {ActivityIndicator, Animated, Text, View} from 'react-native';
 import tw from '@utils/tailwind';
 import {getFontFamily} from '@utils/font-family';
 import {commonStyles} from '@styles/common';
@@ -42,11 +42,19 @@ const LoadingComponent = () => {
       </Animated.Text>
       <View
         style={[
-          tw`w-36 h-1.5 -mt-1 rounded-t-full bg-white`,
-          commonStyles.shadow,
+          tw`w-36 h-1.5 -mt-1`,
+          {
+            backgroundColor: '#fff',
+            borderTopStartRadius: 1000,
+            borderTopEndRadius: 1000,
+            shadowColor: '#000',
+            shadowOffset: {width: 0, height: 5},
+            shadowOpacity: 0.3,
+            shadowRadius: 6,
+          }
         ]}
       />
-      <ActivityIndicator color={'white'} style={tw`mt-8`} />
+      <ActivityIndicator color={'white'} style={tw`mt-8`}/>
     </View>
   );
 };
